@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My calculator</title>
+  </head>
+  <body>
+    <h1>My Calculator</h1>
+
+    First Number<br />
+    <input id="n1" type="number" /><br />
+
+    Second Number<br />
+    <input id="n2" type="number" /><br /><br />
+    <button onclick="sum()">Sum</button>
+    <button onclick="subtract()">Subtract</button>
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+    <br /><br />
+    The Result is <span></span>
+
+    <script>
+      var n1 = document.querySelector("#n1");
+      var n2 = document.querySelector("#n2");
+      var result = document.querySelector("span");
+
+      function sum() {
+        result.innerHTML = parseInt(n1.value) + parseInt(n2.value);
+      }
+
+      function subtract() {
+        result.innerHTML = parseInt(n1.value) - parseInt(n2.value);
+      }
+
+      function multiply() {
+        result.innerHTML = parseInt(n1.value) * parseInt(n2.value);
+      }
+
+      function divide() {
+        result.innerHTML = parseInt(n1.value) / parseInt(n2.value);
+      }
+    </script>
+  </body>
+</html>
